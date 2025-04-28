@@ -37,15 +37,15 @@ export default function MainContent() {
     return(
         <>
             <div className="flex flex-col items-center justify-center bg-[#fef7f1] text-black pb-100 pt-30">
-                <div className="font-playfair text-7xl font-extrabold text-center">Discover the world of quizzes<br></br> with Treadly!</div>
-                <div className="text-2xl font-archivo text-[#aaa5a0] font-medium">Unlock your secrets of your destination with Treadly, the Ultimate Travel Quiz App</div>
+                <div className="font-playfair md:text-7xl font-extrabold text-center text-5xl">Discover the world of quizzes<br></br> with Treadly!</div>
+                <div className="md:text-2xl font-archivo text-[#aaa5a0] font-medium text-center">Unlock your secrets of your destination with Treadly, the Ultimate Travel Quiz App</div>
                 <div className="flex flex-row items-center justify-center mt-10 gap-6">
                     <input
                         ref={inputRef}
-                        className="font-archivo bg-white text-black p-5 font-semibold rounded"
+                        className="font-archivo bg-white text-black p-4 md:p-5 font-semibold rounded"
                         placeholder="Enter your Destination"
                     />
-                    <button className="text-[#C7C5C2] text-archivo font-semibold bg-[#211E21] py-5 px-10 rounded-2xl hover:text-white hover:scale-105 transition shadow-2xl">
+                    <button className="text-[#C7C5C2] text-archivo font-semibold bg-[#211E21] p-4 md:py-5 md:px-10 rounded-2xl hover:text-white hover:scale-105 transition shadow-2xl">
                         Start
                     </button>
                 </div>
@@ -54,12 +54,12 @@ export default function MainContent() {
 
             </div>
             <div className="flex flex-col justify-center items-center ">
-                <div className="w-screen h-screen top-0 text-5xl font-bold min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-100 via-pink-200 to-pink-300 overflow-hidden sticky">
+                <div className="w-full h-auto top-0 text-5xl font-bold min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-100 via-pink-200 to-pink-300 overflow-hidden sticky pt-10 sm:pt-0">
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="text-5xl md:text-6xl font-extrabold text-center font-archivo mb-6 text-black drop-shadow-lg"
+                        className="text-4xl md:text-6xl font-extrabold text-center font-archivo mb-6 text-black drop-shadow-lg"
                     >
                         Personalized Quizzes
                     </motion.h1>
@@ -94,7 +94,7 @@ export default function MainContent() {
                     <div className="absolute top-0 left-0 w-48 h-48 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-pulse"></div>
                     <div className="absolute bottom-0 right-0 w-48 h-48 bg-yellow-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-pulse"></div>
                 </div>
-                <div className="w-screen h-screen top-0 text-5xl font-bold min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-200 via-sky-300 to-sky-400 sticky overflow-hidden">
+                <div className="w-full h-auto top-0 text-5xl font-bold min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-200 via-sky-300 to-sky-400 sticky overflow-hidden  pt-10 sm:pt-0">
                         <motion.h1
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -135,7 +135,7 @@ export default function MainContent() {
                         <div className="absolute top-0 left-0 w-48 h-48 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-pulse"></div>
                         <div className="absolute bottom-0 right-0 w-48 h-48 bg-green-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-pulse"></div>
                     </div>   
-                    <div className="w-screen h-screen top-0 font-bold min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-amber-100 via-amber-200 to-amber-300 relative">
+                    <div className="w-full h-auto top-0 font-bold min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-amber-100 via-amber-200 to-amber-300 relative p-10 sm:p-0">
                         {/* Heading */}
                         <motion.h1
                             initial={{ opacity: 0, y: -50 }}
