@@ -5,7 +5,7 @@ export default function Navbar() {
     <div className="flex justify-between items-center p-4 bg-[#fef7f1] text-black min-w-screen sticky top-0 z-50 shadow-md">
       
       <Link href="/">
-        <div style={{ fontFamily: 'Great Vibes, cursive' }} className="text-3xl font-bold cursor-pointer">Treadly</div>
+        <div className="font-great-vibes text-3xl font-bold cursor-pointer">Treadly</div>
       </Link>
 
       <div className="flex items-center space-x-4 px-4 py-2 text-[#878587] font-bebas">

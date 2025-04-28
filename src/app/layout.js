@@ -1,14 +1,89 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono,Great_Vibes, Poppins, Montserrat, Playfair_Display, Roboto, Open_Sans, Lora, Raleway, Quicksand, Oswald, Bebas_Neue, Archivo} from "next/font/google";
 import Head from 'next/head';
 import "./globals.css";
 
+// Load Google fonts using Next.js method
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  weight: "400", 
   subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  weight: "400", 
+  subsets: ["latin"],
+});
+
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
+  weight: "400", 
+  subsets: ["latin"], 
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: "400", 
+  subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  weight: "400", 
+  subsets: ["latin"],
+});
+
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
+  weight: "400", 
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  weight: "400", 
+  subsets: ["latin"],
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  weight: "400", 
+  subsets: ["latin"],
+});
+
+const lora = Lora({
+  variable: "--font-lora",
+  weight: "400", 
+  subsets: ["latin"],
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
+  weight: "400", 
+  subsets: ["latin"],
+});
+
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
+  weight: "400", 
+  subsets: ["latin"],
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  weight: "400", 
+  subsets: ["latin"],
+});
+
+const bebas = Bebas_Neue({
+  variable: "--font-bebas",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const archivo = Archivo({
+  variable: "--font-archivo",
+  weight: "400", 
   subsets: ["latin"],
 });
 
@@ -22,9 +97,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&family=Montserrat&family=Playfair+Display&family=Roboto&family=Open+Sans&family=Lora&family=Raleway&family=Quicksand&family=Oswald&family=Bebas+Neue&family=Archivo&display=swap" />
       </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${greatVibes.variable} ${poppins.variable} ${montserrat.variable} ${playfairDisplay.variable} ${roboto.variable} ${openSans.variable} ${lora.variable} ${raleway.variable} ${quicksand.variable} ${oswald.variable} ${bebas.variable} ${archivo.variable} antialiased`}>
         {children}
       </body>
     </html>

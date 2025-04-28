@@ -1,58 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import "tailwindcss";
 
-.font-greatVibes {
-  font-family: 'Great Vibes', cursive;
+.font-great-vibes {
+  font-family: var(--font-great-vibes), cursive;
 }
 
 .font-poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins), sans-serif;
 }
 
 .font-montserrat {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
 }
 
 .font-playfair {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-playfair-display), serif;
 }
 
 .font-roboto {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
 }
 
 .font-opensans {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), sans-serif;
 }
 
 .font-lora {
-  font-family: 'Lora', serif;
+  font-family: var(--font-lora), serif;
 }
 
 .font-raleway {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
 }
 
 .font-quicksand {
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--font-quicksand), sans-serif;
 }
 
 .font-oswald {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-oswald), sans-serif;
 }
 
 .font-bebas {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-bebas), sans-serif;
 }
 
 .font-archivo {
-  font-family: 'Archivo', sans-serif;
+  font-family: var(--font-archivo), sans-serif;
 }
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
