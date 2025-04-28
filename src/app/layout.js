@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
