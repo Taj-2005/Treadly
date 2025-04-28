@@ -11,6 +11,7 @@ export default function QuizContainer() {
   const [selectedAnswers, setSelectedAnswers] = useState(Array(10).fill(null));
   const [prompt, setPrompt] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [showExitModal, setShowExitModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -20,6 +21,7 @@ export default function QuizContainer() {
     setData([]);
     setIndex(0);
     setPrompt("");
+    setSelectedAnswers(Array(10).fill(null));
   }
 
   async function fetchData(givenText) {
@@ -32,7 +34,7 @@ export default function QuizContainer() {
         body: JSON.stringify({
           contents: [{
             parts: [{
-              text: `give 10 mcq question for travellers to know about the trip which will make them enthusiastic to go for the trip, options -> array, answer as the keys of ${givenText} with question don't include any extra text just give the json file`
+              text: `give 10 mcq question for travellers to know about the trip which will make them enthuastic to go for the trip, options -> array, anser as the keys of ${givenText} with question dont include any extra text just give the json file dont include any para heading or reply just return the json file to me `
             }]
           }]
         }),
@@ -58,33 +60,23 @@ export default function QuizContainer() {
     }
   }
 
-  // Handle navigation with confirmation on quiz page
-  const handleNavigateHome = () => {
+  function handleHomeClick() {
     if (data.length > 0) {
-      // Show confirmation before navigating away from the quiz
-      setShowModal(true);
+      setShowExitModal(true);
     } else {
-      // If no quiz data, navigate without confirmation
-      resetAll();
       router.push("/");
     }
-  };
+  }
 
-  // Handle submit action when the user confirms the modal
-  const handleConfirmSubmit = () => {
+  function confirmExit() {
     resetAll();
-    setShowModal(false);
-    router.push("/"); // Navigate to homepage after submission
-  };
-
-  // Handle cancel action
-  const handleCancelSubmit = () => {
-    setShowModal(false);
-  };
+    setShowExitModal(false);
+    router.push("/");
+  }
 
   return (
     <>
-      <NavBar handleHomeClick={handleNavigateHome} />
+      <NavBar handleHomeClick={handleHomeClick} />
       <div className="flex flex-col justify-center items-center p-10 relative">
         {loading && (
           <div className="fixed top-0 left-0 right-0 h-1 bg-blue-500 animate-pulse z-50"></div>
@@ -92,8 +84,10 @@ export default function QuizContainer() {
 
         {data.length === 0 ? (
           <>
+          <div className="text-5xl py-20">Where would you like to go ?</div>
             <input
               className="m-5 border border-gray-400 p-3 rounded-xl w-80"
+              value={prompt || ""}
               onChange={(e) => setPrompt(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
@@ -101,14 +95,16 @@ export default function QuizContainer() {
                   fetchData(prompt);
                 }
               }}
-              placeholder="Enter Prompt"
+              placeholder="Enter a Destination"
             />
+
             <button
               className="bg-blue-500 text-white px-6 py-2 rounded-lg mb-5"
               onClick={() => fetchData(prompt)}
             >
-              Ask
+              Start
             </button>
+            <div className="text-2xl">Take the Travel Quiz</div>
           </>
         ) : (
           <>
@@ -143,24 +139,26 @@ export default function QuizContainer() {
               >
                 Submit
               </button>
+
+              {/* Submit confirmation modal */}
               {showModal && (
                 <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
-                  <div className="bg-white p-6 rounded-xl shadow-2xl max-w-md w-full text-center animate-fadeIn scale-95">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-                      Confirm Submission
-                    </h2>
-                    <p className="text-gray-600 mb-6">
-                      You are in the middle of the quiz. Are you sure you want to submit the quiz and go to the homepage?
-                    </p>
+                  <div className="bg-white p-6 rounded-2xl shadow-2xl max-w-md w-full text-center animate-fadeIn scale-95">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-3">Confirm Submission</h2>
+                    <p className="text-gray-600 mb-6">Are you sure you want to submit your answers?</p>
                     <div className="flex justify-center gap-4">
                       <button
-                        onClick={handleConfirmSubmit}
+                        onClick={() => {
+                          resetAll();
+                          setShowModal(false);
+                          router.push("/");
+                        }}
                         className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-medium transition"
                       >
                         Yes, Submit
                       </button>
                       <button
-                        onClick={handleCancelSubmit}
+                        onClick={() => setShowModal(false)}
                         className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg font-medium transition"
                       >
                         Cancel
@@ -169,6 +167,34 @@ export default function QuizContainer() {
                   </div>
                 </div>
               )}
+
+              {/* Exit without submitting confirmation modal */}
+              {showExitModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                  <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-lg w-full text-center">
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Wait! 😯</h2>
+                    <p className="text-gray-600 mb-6">
+                      You're in the middle of the quiz. Are you <span className="text-red-500 font-semibold">sure</span> you want to leave? <br />
+                      Your progress will be <span className="font-semibold">lost</span>!
+                    </p>
+                    <div className="flex justify-center gap-6">
+                      <button
+                        onClick={confirmExit}
+                        className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition"
+                      >
+                        Yes, Exit
+                      </button>
+                      <button
+                        onClick={() => setShowExitModal(false)}
+                        className="bg-gray-400 hover:bg-gray-500 text-white px-6 py-3 rounded-xl font-semibold transition"
+                      >
+                        No, Stay
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
             </div>
           </>
         )}
