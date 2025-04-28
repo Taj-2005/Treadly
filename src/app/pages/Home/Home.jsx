@@ -1,12 +1,14 @@
 "use client";
 
-import QuizContainer from "@/app/components/QuizContainer/QuizContainer.jsx";
+import NavBar from "@/app/components/NavBar/NavBar";
+import MainContent from "@/app/components/MainContent/MainContent";
 
 export default function Home() {
 
   return (
     <>
-      <QuizContainer />
+      <NavBar />
+      <MainContent />
     </>
   );
 }
