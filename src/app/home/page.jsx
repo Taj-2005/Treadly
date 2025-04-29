@@ -2,6 +2,7 @@
 
 import NavBar from "@/app/components/NavBar/NavBar";
 import MainContent from "@/app/components/MainContent/MainContent";
+import Footer from "../components/Foooter/Footer";
 
 export default function Home() {
 
@@ -9,6 +10,7 @@ export default function Home() {
     <>
       <NavBar />
       <MainContent />
+      <Footer />
     </>
   );
 }

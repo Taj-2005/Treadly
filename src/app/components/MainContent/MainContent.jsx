@@ -37,7 +37,7 @@ export default function MainContent() {
     return(
         <>
             <div className="flex flex-col items-center justify-center bg-[#fef7f1] text-black pb-100 pt-30">
-                <div className="font-playfair md:text-7xl font-extrabold text-center text-5xl">Discover the world of quizzes<br></br> with Treadly!</div>
+                <div className="font-archivo md:text-7xl font-extrabold text-center text-5xl text-gray-700">Discover the world of quizzes<br></br> with Treadly!</div>
                 <div className="md:text-2xl font-archivo text-[#aaa5a0] font-medium text-center">Unlock your secrets of your destination with Treadly, the Ultimate Travel Quiz App</div>
                 <div className="flex flex-row items-center justify-center mt-10 gap-6 md:gap-10">
                     <input
