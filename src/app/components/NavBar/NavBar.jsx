@@ -10,7 +10,6 @@ export default function Navbar() {
 
       <div className="flex items-center space-x-4 px-4 py-2 text-[#878587] font-bebas">
         
-        {/* Mobile Hamburger Icon */}
         <div className="flex sm:hidden">
           <button className="text-[#878587] hover:text-black">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -19,9 +18,8 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Desktop Menu */}
         <div className="hidden sm:flex space-x-4">
-          <Link href="/">
+          <Link href="/home">
             <div className="hover:text-black transition-colors duration-300 px-2 cursor-pointer">Home</div>
           </Link>
           <Link href="/about">
