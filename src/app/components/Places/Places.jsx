@@ -1,278 +1,81 @@
 "use client";
 
-import { useState } from "react";
+import { useRef } from "react";
 import Card from "../Card/Card";
-import places from "../../../../constants/places.json";
+import places from "@/constants/places.json";
 
 export default function Places() {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const categories = [
+    "Hill Stations",
+    "Cities/Heritage",
+    "Beaches",
+    "Deserts",
+    "Wildlife",
+    "Spiritual",
+    "Adventure",
+  ];
 
-  const scroll = (direction) => {
+  const scrollRefs = useRef({});
+
+  const scroll = (direction, category) => {
     const scrollAmount = direction === "left" ? -1 : 1;
-    const scrollContainer = document.getElementById("scroll-container");
-    const itemWidth = scrollContainer.querySelector(".flex-shrink-0").offsetWidth;
-    const newScrollPosition = scrollPosition + itemWidth * scrollAmount;
+    const container = scrollRefs.current[category];
 
-    setScrollPosition(newScrollPosition);
-    scrollContainer.scrollTo({
-      left: newScrollPosition,
+    if (!container) return;
+
+    const item = container.querySelector(".flex-shrink-0");
+    if (!item) return;
+
+    const itemWidth = item.offsetWidth;
+    const newPosition = container.scrollLeft + itemWidth * scrollAmount;
+
+    container.scrollTo({
+      left: newPosition,
       behavior: "smooth",
     });
   };
 
   return (
     <div className="flex flex-col justify-center items-center gap-10 p-10 bg-[#fef7f1]">
-      <div className="relative w-full">
-        <div className="text-5xl text-gray-700 px-5 py-10 font-poppins font-extrabold">
-          Hill Stations
+      {categories.map((category) => (
+        <div key={category} className="relative w-full">
+          <div className="text-5xl text-gray-700 px-5 py-10 font-poppins font-extrabold">
+            {category}
+          </div>
+
+          <div
+            ref={(el) => (scrollRefs.current[category] = el)}
+            className="flex flex-row overflow-x-auto space-x-4 px-4 scrollbar-hide scroll-smooth"
+          >
+            {places[category].map((place, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xs:w-full"
+              >
+                <Card
+                  title={place.name}
+                  description={place.description}
+                  image={place.image}
+                />
+              </div>
+            ))}
+          </div>
+
+          <button
+            onClick={() => scroll("left", category)}
+            className="absolute top-65 left-[-20] bg-gray-800 text-white p-2 rounded-full z-10"
+          >
+            &lt;
+          </button>
+
+          <button
+            onClick={() => scroll("right", category)}
+            className="absolute top-65 right-0 bg-gray-800 text-white p-2 rounded-full z-10"
+          >
+            &gt;
+          </button>
         </div>
-
-        <div
-          id="scroll-container"
-          className="flex flex-row overflow-x-auto space-x-4 px-4 scrollbar-hide"
-        >
-          {places["Hill Stations"].map((place, index) => (
-            <div key={index} className="flex-shrink-0 w-[calc(100%)] sm:w-[calc(100%/2)] lg:w-[calc(100%/3)] xs:w-full">
-              <Card 
-                title={place.name} 
-                description={place.description} 
-                image={place.image} 
-              />
-            </div>
-          ))}
-        </div>
-
-        <button
-          onClick={() => scroll("left")}
-          className="absolute top-65 left-[-20]  bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &lt;
-        </button>
-
-        <button
-          onClick={() => scroll("right")}
-          className="absolute top-65 right-0 bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &gt;
-        </button>
-      </div>
-
-
-      <div className="relative w-full">
-        <div className="text-5xl text-gray-700 px-5 py-10 font-poppins font-extrabold">
-          Cities and Heritage
-        </div>
-
-
-        <div
-          id="scroll-container"
-          className="flex flex-row overflow-x-auto space-x-4 px-4 scrollbar-hide"
-        >
-          {places["Cities/Heritage"].map((place, index) => (
-            <div key={index} className="flex-shrink-0 w-[calc(100%)] sm:w-[calc(100%/2)] lg:w-[calc(100%/3)] xs:w-full">
-              <Card 
-                title={place.name} 
-                description={place.description} 
-                image={place.image} 
-              />
-            </div>
-          ))}
-        </div>
-
-        <button
-          onClick={() => scroll("left")}
-          className="absolute top-65 left-[-20]  bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &lt;
-        </button>
-
-        <button
-          onClick={() => scroll("right")}
-          className="absolute top-65 right-0 bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &gt;
-        </button>
-      </div>
-
-
-      <div className="relative w-full">
-        <div className="text-5xl text-gray-700 px-5 py-10 font-poppins font-extrabold">
-          Beaches
-        </div>
-
-        <div
-          id="scroll-container"
-          className="flex flex-row overflow-x-auto space-x-4 px-4 scrollbar-hide"
-        >
-          {places["Beaches"].map((place, index) => (
-            <div key={index} className="flex-shrink-0 w-[calc(100%)] sm:w-[calc(100%/2)] lg:w-[calc(100%/3)] xs:w-full">
-              <Card 
-                title={place.name} 
-                description={place.description} 
-                image={place.image} 
-              />
-            </div>
-          ))}
-        </div>
-
-        <button
-          onClick={() => scroll("left")}
-          className="absolute top-65 left-[-20]  bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &lt;
-        </button>
-
-        <button
-          onClick={() => scroll("right")}
-          className="absolute top-65 right-0 bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &gt;
-        </button>
-      </div>
-
-
-      <div className="relative w-full">
-        <div className="text-5xl text-gray-700 px-5 py-10 font-poppins font-extrabold">
-            Deserts
-        </div>
-
-        <div
-          id="scroll-container"
-          className="flex flex-row overflow-x-auto space-x-4 px-4 scrollbar-hide"
-        >
-          {places["Deserts"].map((place, index) => (
-            <div key={index} className="flex-shrink-0 w-[calc(100%)] sm:w-[calc(100%/2)] lg:w-[calc(100%/3)] xs:w-full">
-              <Card 
-                title={place.name} 
-                description={place.description} 
-                image={place.image} 
-              />
-            </div>
-          ))}
-        </div>
-
-        <button
-          onClick={() => scroll("left")}
-          className="absolute top-65 left-[-20]  bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &lt;
-        </button>
-
-        <button
-          onClick={() => scroll("right")}
-          className="absolute top-65 right-0 bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &gt;
-        </button>
-      </div>
-
-
-      <div className="relative w-full">
-        <div className="text-5xl text-gray-700 px-5 py-10 font-poppins font-extrabold">
-            Wildlife
-        </div>
-
-        <div
-          id="scroll-container"
-          className="flex flex-row overflow-x-auto space-x-4 px-4 scrollbar-hide"
-        >
-          {places["Wildlife"].map((place, index) => (
-            <div key={index} className="flex-shrink-0 w-[calc(100%)] sm:w-[calc(100%/2)] lg:w-[calc(100%/3)] xs:w-full">
-              <Card 
-                title={place.name} 
-                description={place.description} 
-                image={place.image} 
-              />
-            </div>
-          ))}
-        </div>
-
-        <button
-          onClick={() => scroll("left")}
-          className="absolute top-65 left-[-20]  bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &lt;
-        </button>
-
-        <button
-          onClick={() => scroll("right")}
-          className="absolute top-65 right-0 bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &gt;
-        </button>
-      </div>
-
-
-      <div className="relative w-full">
-        <div className="text-5xl text-gray-700 px-5 py-10 font-poppins font-extrabold">
-            Spiritual
-        </div>
-
-        <div
-          id="scroll-container"
-          className="flex flex-row overflow-x-auto space-x-4 px-4 scrollbar-hide"
-        >
-          {places["Spiritual"].map((place, index) => (
-            <div key={index} className="flex-shrink-0 w-[calc(100%)] sm:w-[calc(100%/2)] lg:w-[calc(100%/3)] xs:w-full">
-              <Card 
-                title={place.name} 
-                description={place.description} 
-                image={place.image} 
-              />
-            </div>
-          ))}
-        </div>
-
-        <button
-          onClick={() => scroll("left")}
-          className="absolute top-65 left-[-20]  bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &lt;
-        </button>
-
-        <button
-          onClick={() => scroll("right")}
-          className="absolute top-65 right-0 bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &gt;
-        </button>
-      </div>
-
-
-      <div className="relative w-full">
-        <div className="text-5xl text-gray-700 px-5 py-10 font-poppins font-extrabold">
-            Adventure
-        </div>
-
-        <div
-          id="scroll-container"
-          className="flex flex-row overflow-x-auto space-x-4 px-4 scrollbar-hide"
-        >
-          {places["Adventure"].map((place, index) => (
-            <div key={index} className="flex-shrink-0 w-[calc(100%)] sm:w-[calc(100%/2)] lg:w-[calc(100%/3)] xs:w-full">
-              <Card 
-                title={place.name} 
-                description={place.description} 
-                image={place.image} 
-              />
-            </div>
-          ))}
-        </div>
-
-        <button
-          onClick={() => scroll("left")}
-          className="absolute top-65 left-[-20]  bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &lt;
-        </button>
-
-        <button
-          onClick={() => scroll("right")}
-          className="absolute top-65 right-0 bg-gray-800 text-white p-2 rounded-full z-10"
-        >
-          &gt;
-        </button>
-      </div>
+      ))}
     </div>
   );
 }
