@@ -1,11 +1,9 @@
 import Navbar from "../components/NavBar/NavBar";
-import Places from "../components/Places/Places";
 
-export default function quizzes(){
+export default function Contact() {
     return(
         <>
             <Navbar/>
-            <Places/>
         </>
     )
 }

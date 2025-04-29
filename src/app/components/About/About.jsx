@@ -26,7 +26,7 @@ export default function About() {
 
         <div className="flex flex-col justify-center items-center mt-20">
             <div className="text-black text-center text-5xl md:text-7xl font-archivo font-extrabold p-10">Elevate your Travel Experience</div>
-            <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 text-start items-start m-20 md:gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-6 text-start items-start m-10 md:gap-10">
                 <div className="flex flex-col justify-center items-start bg-[#ffffff] md:p-10 p-5 rounded-4xl hover:scale-105 duration-400">
                     <div className="text-2xl sm:text-3xl md:text-4xl font-archivo font-extrabold text-black pt-10 pb-5 text-start md:text-start">Personalized Quizzes</div>
                     <div className="text-xl font-archivo font-bold text-[#7c797a] pt-5 pb-5 md:text-start text-start">Treadly's travel quizzes are tailored to your interests and preferences, ensuring you learn about destinations that truly inspire you</div>

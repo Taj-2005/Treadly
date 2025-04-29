@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#635d59] text-white px-6 py-12">
+    <footer className="bg-[#635d59] text-white px-6 py-12 relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
         <div className='text-center'>
           <h1 className="font-great-vibes text-7xl text-white">Treadly</h1>
