@@ -1,11 +1,61 @@
+"use client";
+
+import { useState } from "react";
 import Card from "../Card/Card";
+import places from "../../../../constants/places.json";
 
 export default function Places() {
-    return(
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-10 bg-[#fef7f1]">
-            <Card title="Hyderabad" description="Hyderabad is a vibrant blend of rich history and modern innovation, known for its iconic Charminar, biryani, and thriving tech industry." image="https://media.istockphoto.com/id/1215274990/photo/high-wide-angle-view-of-charminar-in-the-night.jpg?s=1024x1024&w=is&k=20&c=8VF8tsWn8Iy5Ls8vTAo73rQntfzSYsK5pAAJDcP4oUE="/>
-            <Card title="Vizag" description="Vizag, or Visakhapatnam, is a coastal city in India known for its stunning beaches, scenic hills, and rich maritime history." image="https://images.unsplash.com/photo-1609854534028-b512f5246abc?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-            <Card title="Araku Valley" description="Araku Valley is a scenic hill station in Andhra Pradesh, known for its lush green valleys, coffee plantations, and tribal culture." image="https://plus.unsplash.com/premium_photo-1675448891151-5fbb19c7d80c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const scroll = (direction) => {
+    const scrollAmount = direction === "left" ? -1 : 1;
+    const scrollContainer = document.getElementById("scroll-container");
+    const itemWidth = scrollContainer.querySelector(".flex-shrink-0").offsetWidth;
+    const newScrollPosition = scrollPosition + itemWidth * 3 * scrollAmount;
+    
+    setScrollPosition(newScrollPosition);
+    scrollContainer.scrollTo({
+      left: newScrollPosition,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <div className="flex flex-col justify-center items-center gap-10 p-10 bg-[#fef7f1]">
+      <div className="relative w-full">
+        <div className="text-5xl text-gray-700 px-5 py-10 font-poppins font-extrabold">
+          Hill Stations
         </div>
-    )
+
+        <div
+          id="scroll-container"
+          className="flex flex-row overflow-x-auto space-x-4 px-4 scrollbar-hide"
+        >
+          {places["Hill Stations"].map((place, index) => (
+            <div key={index} className="flex-shrink-0 w-[calc(100%)] sm:w-[calc(100%/2)] lg:w-[calc(100%/3)] xs:w-full">
+              <Card 
+                title={place.name} 
+                description={place.description} 
+                image={place.image} 
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => scroll("left")}
+          className="absolute top-65 left-[-20] bg-gray-800 text-white p-2 rounded-full z-10"
+        >
+          &lt;
+        </button>
+
+        <button
+          onClick={() => scroll("right")}
+          className="absolute top-65 right-0  bg-gray-800 text-white p-2 rounded-full lg:right-5 sm:right-2 z-10"
+        >
+          &gt;
+        </button>
+      </div>
+    </div>
+  );
 }
