@@ -5,7 +5,7 @@ export default function About() {
     return (
         <div className="flex flex-col bg-[#fef7f1]">
         <div className="flex flex-col h-auto lg:min-h-[90vh] md:flex-row items-center justify-around px-10 py-20 ld:gap-0 gap-10">
-            <Image 
+            <img 
             src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/c817166e-d987-41b9-b41d-427b1fc4a503/ecc2bc8d-8a22-4cc1-a8c5-9fa1ba55f907.png" 
             alt="Trecking"
             width={500}
