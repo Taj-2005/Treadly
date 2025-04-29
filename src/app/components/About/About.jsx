@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "../Button/Button";
 
 export default function About() {
     return (
@@ -15,9 +16,7 @@ export default function About() {
                 <div className="text-4xl sm:text-5xl md:text-6xl font-archivo font-extrabold text-black pt-10 pb-5 text-center md:text-start">Discover Hidden Gems</div>
                 <div className="text-xl font-archivo font-bold text-[#7c797a] pt-5 pb-5 md:text-start text-center">Treadly's curated trivia covers a wide range of topics,<br></br> from local history and culture to popular attractions and<br></br> off-the-beaten-path adventures</div>
                 <Link href="/quizzes">
-                    <button className="text-[#C7C5C2] text-archivo font-semibold bg-[#211E21] p-4 md:py-5 md:px-10 rounded-2xl hover:text-white hover:scale-105 transition shadow-2xl">
-                        Start Quizzing
-                    </button>
+                    <Button text="Start Quizzing" />
                 </Link>
 
             </div>
@@ -30,9 +29,7 @@ export default function About() {
                     <div className="text-2xl sm:text-3xl md:text-4xl font-archivo font-extrabold text-black pt-10 pb-5 text-start md:text-start">Personalized Quizzes</div>
                     <div className="text-xl font-archivo font-bold text-[#7c797a] pt-5 pb-5 md:text-start text-start">Treadly's travel quizzes are tailored to your interests and preferences, ensuring you learn about destinations that truly inspire you</div>
                     <Link href="/quizzes">
-                        <button className="text-[#C7C5C2] text-archivo font-semibold bg-[#211E21] p-2 md:py-3 md:px-6 rounded-2xl hover:text-white hover:scale-105 transition shadow-2xl">
-                            Take the Quiz
-                        </button>
+                        <Button text="Take the Quiz" />
                     </Link>
                 </div>
 
@@ -40,9 +37,7 @@ export default function About() {
                     <div className="text-2xl sm:text-3xl md:text-4xl font-archivo font-extrabold text-black pt-10 pb-5 text-start md:text-start">Engaging Trivia</div>
                     <div className="text-xl font-archivo font-bold text-[#7c797a] pt-5 pb-5 md:text-start text-start">Treadly's trivia questions are designed to be both informative and entertaining, challenging you to expand your travel knowledge while keeping you engaged and entertained</div>
                     <Link href="/quizzes">
-                        <button className="text-[#C7C5C2] text-archivo font-semibold bg-[#211E21] p-2 md:py-3 md:px-6 rounded-2xl hover:text-white hover:scale-105 transition shadow-2xl">
-                            Explore More
-                        </button>
+                        <Button text="Explore More" />
                     </Link>
                 </div>
 
@@ -50,9 +45,7 @@ export default function About() {
                     <div className="text-2xl sm:text-3xl md:text-4xl font-archivo font-extrabold text-black pt-10 pb-5 text-start md:text-start">Discover Hidden Gems</div>
                     <div className="text-xl font-archivo font-bold text-[#7c797a] pt-5 pb-5 md:text-start text-start">Treadly's curated content covers a wide range of destinations, from well-known hotspots to off-the-beaten-path gems. Expand your travel horizons and uncover the secrets of the world</div>
                     <Link href="/quizzes">
-                        <button className="text-[#C7C5C2] text-archivo font-semibold bg-[#211E21] p-2 md:py-3 md:px-6 rounded-2xl hover:text-white hover:scale-105 transition shadow-2xl">
-                            Start Quizzing
-                        </button>
+                        <Button text="Start Quizzing" />
                     </Link>
                 </div>
 
@@ -60,9 +53,7 @@ export default function About() {
                     <div className="text-2xl sm:text-3xl md:text-4xl font-archivo font-extrabold text-black pt-10 pb-5 text-start md:text-start">Informative Results</div>
                     <div className="text-xl font-archivo font-bold text-[#7c797a] pt-5 pb-5 md:text-start text-start">Treadly's quiz results not only test your travel knowledge but also provide valuable insights and recommendations to help you plan your next adventure</div>
                     <Link href="/quizzes">
-                        <button className="text-[#C7C5C2] text-archivo font-semibold bg-[#211E21] p-2 md:py-3 md:px-6 rounded-2xl hover:text-white hover:scale-105 transition shadow-2xl">
-                            Learn More
-                        </button>
+                        <Button text="Learn More" />
                     </Link>
                 </div>
             </div>
@@ -72,9 +63,7 @@ export default function About() {
                 <div className="text-4xl sm:text-5xl md:text-4xl font-archivo font-extrabold text-black pt-10 pb-5 text-center md:text-start">Plan Your Next Adventure</div>
                 <div className="text-xl font-archivo font-bold text-[#7c797a] pt-5 pb-5 md:text-start text-center">With Treadly, you can explore the world like never before. Personalized quizzes, engaging trivia, and informative results help you discover hidden gems, expand your travel horizons,and plan your next unforgettable journey</div>
                 <Link href="/quizzes">
-                    <button className="text-[#C7C5C2] text-archivo font-semibold bg-[#211E21] p-4 md:py-5 md:px-10 rounded-2xl hover:text-white hover:scale-105 transition shadow-2xl">
-                        Get Started
-                    </button>
+                    <Button text="Get Started" />
                 </Link>
 
             </div>

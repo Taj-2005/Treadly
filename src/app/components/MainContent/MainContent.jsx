@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
+import Button from "../Button/Button";
 
 export default function MainContent() {
     const inputRef = useRef(null);
@@ -45,9 +46,7 @@ export default function MainContent() {
                         className="font-archivo bg-white text-black p-4 md:p-5 font-semibold rounded"
                         placeholder="Enter your Destination"
                     />
-                    <button className="text-[#C7C5C2] text-archivo font-semibold bg-[#211E21] p-4 md:py-5 md:px-10 rounded-2xl hover:text-white hover:scale-105 transition shadow-2xl">
-                        Start
-                    </button>
+                    <Button text="Start"/>
                 </div>
 
 
