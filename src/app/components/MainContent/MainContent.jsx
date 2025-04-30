@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Button from "../Button/Button";
 
 export default function MainContent() {
@@ -46,7 +47,9 @@ export default function MainContent() {
                         className="font-archivo bg-white text-black p-4 md:p-5 font-semibold rounded"
                         placeholder="Enter your Destination"
                     />
-                    <Button text="Start"/>
+                    <Button text="Start" onClick={() => {
+                        router.push("/quiz");
+                    }}/>
                 </div>
 
 
