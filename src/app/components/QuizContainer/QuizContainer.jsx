@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import Question from "@/app/components/Question/Question.jsx";
 import NavBar from "../NavBar/NavBar";
 

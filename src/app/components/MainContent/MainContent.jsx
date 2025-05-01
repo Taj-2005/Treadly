@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Button from "../Button/Button";
 
 export default function MainContent() {
+    const router = useRouter();
     const inputRef = useRef(null);
 
     useEffect(() => {
@@ -47,9 +48,11 @@ export default function MainContent() {
                         className="font-archivo bg-white text-black p-4 md:p-5 font-semibold rounded"
                         placeholder="Enter your Destination"
                     />
-                    <Button text="Start" onClick={() => {
-                        router.push("/quiz");
-                    }}/>
+                <Button text="Start" onClick={() => {
+                const destination = inputRef.current?.value?.trim() || "";
+                console.log("Destination:", destination); // Log the value to check
+                router.push(`/quiz?place=${encodeURIComponent(destination)}`);
+                }} />
                 </div>
 
 
