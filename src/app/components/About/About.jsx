@@ -13,7 +13,7 @@ export default function About() {
             className="rounded-4xl shadow-lg hover:scale-105 duration-400"
             />
             <div className="flex flex-col justify-center items-center md:items-start">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-archivo font-extrabold text-black pt-10 pb-5 text-center md:text-start">Discover Hidden Gems</div>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-archivo font-extrabold text-black pt-10 pb-5 text-center md:text-start">Discover Hidden Gems</h1>
                 <div className="text-xl font-archivo font-bold text-[#7c797a] pt-5 pb-5 md:text-start text-center">Treadly's curated trivia covers a wide range of topics,<br></br> from local history and culture to popular attractions and<br></br> off-the-beaten-path adventures</div>
                 <Link href="/quizzes">
                     <Button text="Start Quizzing" />

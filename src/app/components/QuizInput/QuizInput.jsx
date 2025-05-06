@@ -35,7 +35,7 @@ export default function QuizInput() {
       }, []);
     return (
         <div className="px-6 md:px-12 py-10 bg-[#FBF6EF] text-[#2E2C2A]">
-            <h2 className="text-4xl md:text-5xl font-bold font-archivo mb-6 text-center">Explore & Learn</h2>
+            <h1 className="text-4xl md:text-5xl font-bold font-archivo mb-6 text-center">Explore & Learn</h1>
   
             <div className="flex flex-row items-center justify-center mt-10 gap-6 md:gap-8">
                 <input

@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 export default function ContactForm() {
     return (
         <div className="min-h-screen bg-[#FBF6EF] text-[#2E2C2A] px-6 md:px-12 py-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold font-archivo mb-4 text-center">Get in Touch</h2>
+            <h1 className="text-4xl md:text-5xl font-extrabold font-archivo mb-4 text-center">Get in Touch</h1>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-xl font-semibold">
                 Have questions, feedback, or partnership ideas? We'd love to hear from you!
             </p>
@@ -35,8 +35,9 @@ export default function ContactForm() {
                     className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2E2C2A]"
                 ></textarea>
                 </div>
-
-                <Button text="Send Message"/>
+                <div className="flex flex-row justify-center align-center">
+                    <Button text="Send Message"/>
+                </div>
             </form>
         </div>
     )
