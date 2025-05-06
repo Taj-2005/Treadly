@@ -48,7 +48,7 @@ export default function MainContent() {
                         className="font-archivo bg-white text-black p-4 md:p-5 font-semibold rounded"
                         placeholder="Enter your Destination"
                     />
-                <Button text="Start" onClick={() => {
+                <Button text="Get Started" onClick={() => {
                 const destination = inputRef.current?.value?.trim() || "";
                 console.log("Destination:", destination); // Log the value to check
                 router.push(`/quiz?place=${encodeURIComponent(destination)}`);
