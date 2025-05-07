@@ -98,7 +98,7 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`${greatVibes.variable} ${poppins.variable} ${montserrat.variable} ${playfairDisplay.variable} ${roboto.variable} ${openSans.variable} ${lora.variable} ${raleway.variable} ${quicksand.variable} ${oswald.variable} ${bebas.variable} ${archivo.variable} antialiased`}>
+      <body className={`${greatVibes.variable} ${poppins.variable} ${montserrat.variable} ${playfairDisplay.variable} ${roboto.variable} ${openSans.variable} ${lora.variable} ${raleway.variable} ${quicksand.variable} ${oswald.variable} ${bebas.variable} ${archivo.variable}`}>
         {children}
       </body>
     </html>
