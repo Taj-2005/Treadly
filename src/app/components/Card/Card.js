@@ -1,7 +1,7 @@
 export default function Card({ title, description, image }) {
     return (
       <div className="relative w-full max-w-sm overflow-hidden rounded-lg shadow-xl group">
-        <img src={image} alt={title} width={500} height={500} className="w-full h-80 object-cover" />
+        <img src={image} alt={title} width={500} height={500} className="w-full h-80 object-cover" priority="true"/>
 
         <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
   
