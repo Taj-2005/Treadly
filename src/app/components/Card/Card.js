@@ -1,6 +1,15 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function Card({ title, description, image }) {
+  const router = useRouter();
+  const handleClick = () => {
+    const value = title;
+    router.push(`/quiz?givenText=${encodeURIComponent(value.toLowerCase())}`);
+  };
     return (
-      <div className="relative w-full max-w-sm overflow-hidden rounded-lg shadow-xl group">
+      <div onClick={handleClick} className="relative w-full max-w-sm overflow-hidden rounded-lg shadow-xl group">
         <img src={image} alt={title} width={500} height={500} className="w-full h-80 object-cover" priority="true"/>
 
         <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity duration-300" />

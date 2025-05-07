@@ -6,6 +6,7 @@ import places from "@/constants/places.json";
 
 export default function Places() {
   const categories = [
+    "Countries",
     "Hill Stations",
     "Cities/Heritage",
     "Beaches",

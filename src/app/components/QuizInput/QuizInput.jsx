@@ -1,9 +1,11 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import Button from "../Button/Button";
+import Button from "@/app/components/Button/Button";
+import { useRouter } from "next/navigation";
 
 export default function QuizInput() {
+    const router = useRouter();
     const quizRef = useRef("")
 
     useEffect(() => {
@@ -24,15 +26,21 @@ export default function QuizInput() {
               index++;
             } else {
               clearInterval(intervalId);
-              setTimeout(startTyping, 1000); // wait for 1s before typing again
+              setTimeout(startTyping, 1000);
             }
-          }, 150); // typing speed
+          }, 150);
         }
     
         startTyping();
     
         return () => clearInterval(intervalId);
       }, []);
+
+      const handleClick = () => {
+        const value = quizRef.current?.value || "";
+        router.push(`/quiz?givenText=${encodeURIComponent(value.toLowerCase())}`);
+      };
+
     return (
         <div className="px-6 md:px-12 py-10 bg-[#FBF6EF] text-[#2E2C2A]">
             <h1 className="text-4xl md:text-5xl font-bold font-archivo mb-6 text-center">Explore & Learn</h1>
@@ -43,7 +51,7 @@ export default function QuizInput() {
                     className="font-archivo bg-white text-black p-4 md:p-5 font-semibold rounded"
                     placeholder="Enter your Destination"
                 />
-                <Button text="Attempt Quiz"/>
+                <Button onClick={handleClick} text="Attempt Quiz"/>
             </div>
         </div>
     )

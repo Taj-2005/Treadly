@@ -1,309 +1,411 @@
 {
+    "Countries": [
+    {
+      "name": "Italy",
+      "description": "Italy is renowned for its rich history, art, and cuisine. From the ancient ruins of Rome to the romantic canals of Venice, it offers a diverse cultural experience.",
+      "image": "https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Japan",
+      "description": "Japan seamlessly blends tradition and modernity, offering ancient temples, serene gardens, and bustling cities like Tokyo.",
+      "image": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "France",
+      "description": "France boasts iconic landmarks like the Eiffel Tower, world-class art museums, and exquisite cuisine.",
+      "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Australia",
+      "description": "Australia offers diverse landscapes from the Great Barrier Reef to the Outback, along with vibrant cities like Sydney.",
+      "image": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Canada",
+      "description": "Canada is known for its stunning natural beauty, including vast forests, majestic mountains, and multicultural cities.",
+      "image": "https://images.unsplash.com/photo-1490623970972-ae8bb3da443e?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Brazil",
+      "description": "Brazil is famous for its vibrant culture, Carnival festival, and natural wonders like the Amazon rainforest.",
+      "image": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "New Zealand",
+      "description": "New Zealand offers breathtaking landscapes, from rolling hills to dramatic fjords, and is a haven for outdoor enthusiasts.",
+      "image": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Thailand",
+      "description": "Thailand is known for its tropical beaches, ornate temples, and flavorful street food.",
+      "image": "https://images.unsplash.com/photo-1563492065599-3520f775eeed?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Greece",
+      "description": "Greece offers ancient ruins, stunning islands, and a rich mythology that permeates its culture.",
+      "image": "https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "South Africa",
+      "description": "South Africa boasts diverse ecosystems, from savannas to coastlines, and is renowned for its wildlife safaris.",
+      "image": "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Spain",
+      "description": "Spain is celebrated for its vibrant festivals, historic architecture, and diverse regional cultures.",
+      "image": "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Iceland",
+      "description": "Iceland offers otherworldly landscapes, including geysers, glaciers, and the Northern Lights.",
+      "image": "https://images.unsplash.com/photo-1476610182048-b716b8518aae?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "India",
+      "description": "India is a land of diverse cultures, languages, and landscapes, from the Himalayas to tropical beaches.",
+      "image": "https://madvikretreat.com/wp-content/uploads/2023/11/The-Future-of-Sustainable-Tourism-in-India-A-Look-at-the-Predictions.png"
+    },
+    {
+      "name": "Portugal",
+      "description": "Portugal is known for its historic cities, coastal beauty, and delicious cuisine.",
+      "image": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Peru",
+      "description": "Peru is home to ancient civilizations, including the Incan city of Machu Picchu, and diverse natural landscapes.",
+      "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Morocco",
+      "description": "Morocco offers a blend of Arab, Berber, and European cultural influences, with vibrant markets and desert landscapes.",
+      "image": "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Vietnam",
+      "description": "Vietnam features lush landscapes, historic sites, and a rich culinary tradition.",
+      "image": "https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Turkey",
+      "description": "Turkey bridges Europe and Asia, offering a rich tapestry of history, architecture, and cuisine.",
+      "image": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Indonesia",
+      "description": "Indonesia is an archipelago with diverse cultures, volcanic landscapes, and pristine beaches.",
+      "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Switzerland",
+      "description": "Switzerland is known for its alpine scenery, precision engineering, and high quality of life.",
+      "image": "https://images.unsplash.com/photo-1530878902700-5ad4f9e4c318?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ],
     "Hill Stations": [
         {
             "name": "Ooty",
             "description": "Ooty, also known as the Queen of Nilgiris, is famous for its botanical gardens, tea gardens, and lakes.",
-            "image": "https://images.unsplash.com/photo-1590765759804-0b2b579820b3?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1590765759804-0b2b579820b3?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Shimla",
             "description": "The capital of Himachal Pradesh, Shimla is known for its colonial architecture and scenic views.",
-            "image": "https://images.unsplash.com/photo-1634539132466-abaca3a2438b?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1634539132466-abaca3a2438b?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Manali",
             "description": "A popular hill station in Himachal Pradesh, Manali is famous for its snow-capped mountains and adventure sports.",
-            "image": "https://images.unsplash.com/photo-1712388430474-ace0c16051e2?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1712388430474-ace0c16051e2?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Mussoorie",
             "description": "Known as the Queen of Hills, Mussoorie offers panoramic views of the Himalayas and is famous for its lakes and gardens.",
-            "image": "https://images.unsplash.com/photo-1547106365-bb4b17f50a15?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1547106365-bb4b17f50a15?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Darjeeling",
             "description": "Known for its tea plantations, Darjeeling offers a magnificent view of Kanchenjunga and has a rich cultural heritage.",
-            "image": "https://images.unsplash.com/photo-1622308644420-b20142dc993c?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1622308644420-b20142dc993c?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Nainital",
             "description": "Nainital is a beautiful hill station known for its serene lakes, lush greenery, and pleasant weather.",
-            "image": "https://images.unsplash.com/photo-1667029838861-2fe3a590a1d2?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1667029838861-2fe3a590a1d2?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Munnar",
             "description": "Located in Kerala, Munnar is known for its tea plantations, hills, and rich wildlife.",
-            "image": "https://images.unsplash.com/photo-1605531321045-59731b348442?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1605531321045-59731b348442?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Araku Valley",
             "description": "Located in Andhra Pradesh, Araku Valley is known for its coffee plantations, waterfalls, and scenic beauty.",
-            "image": "https://images.unsplash.com/photo-1717585163315-02e3f0a96584?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1717585163315-02e3f0a96584?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Kodaikanal",
             "description": "Known as the Princess of Hill Stations, Kodaikanal is famous for its beautiful lakes and rolling hills.",
-            "image": "https://images.unsplash.com/photo-1593692867948-bb6ba7c03fd1?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1593692867948-bb6ba7c03fd1?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Hyderabad",
             "description": "Hyderabad, a blend of history and modernity, is known for its rich heritage, bustling markets, and delectable food.",
-            "image": "https://images.unsplash.com/photo-1470075446540-4391a96ec621?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1470075446540-4391a96ec621?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
     ],
     "Cities/Heritage": [
         {
             "name": "Agra",
             "description": "Home to the Taj Mahal, Agra is a UNESCO World Heritage Site known for its Mughal architecture.",
-            "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Jaipur",
             "description": "Known as the Pink City, Jaipur is famous for its palaces, forts, and vibrant bazaars.",
-            "image": "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?w=800&auto=format&fit=crop&q=1&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SmFpcHVyfGVufDB8fDB8fHww"
+            "image": "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?w=800&auto=format&fit=crop&q=100&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SmFpcHVyfGVufDB8fDB8fHww"
         },
         {
             "name": "Delhi",
             "description": "India's capital, Delhi, is rich in history, with landmarks such as the Red Fort, Qutub Minar, and India Gate.",
-            "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Varanasi",
             "description": "One of the oldest cities in the world, Varanasi is known for its ghats, temples, and spiritual significance.",
-            "image": "https://images.unsplash.com/photo-1561361058-c24cecae35ca?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1561361058-c24cecae35ca?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Mumbai",
             "description": "Known as the financial capital of India, Mumbai is a bustling metropolis with a rich cultural scene.",
-            "image": "https://images.unsplash.com/photo-1598434192043-71111c1b3f41?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1598434192043-71111c1b3f41?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Kolkata",
             "description": "Known for its colonial architecture and intellectual culture, Kolkata is a city steeped in history.",
-            "image": "https://images.unsplash.com/photo-1496372412473-e8548ffd82bc?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1496372412473-e8548ffd82bc?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Chennai",
             "description": "Chennai is a major cultural and economic hub in South India, known for its temples, beaches, and cuisine.",
-            "image": "https://images.unsplash.com/photo-1585999322539-fee6e6321a39?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1585999322539-fee6e6321a39?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Vizag",
             "description": "A coastal city in Andhra Pradesh, Vizag is famous for its beaches, hills, and the Submarine Museum.",
-            "image": "https://images.unsplash.com/photo-1655979521437-ae1875109d79?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1655979521437-ae1875109d79?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Hyderabad",
             "description": "Hyderabad is known for its rich history, including landmarks such as the Charminar and Golconda Fort.",
-            "image": "https://images.unsplash.com/photo-1712422813106-dfb845a8a7ed?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1712422813106-dfb845a8a7ed?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Pondicherry",
             "description": "Known for its French colonial architecture, serene beaches, and vibrant culture, Pondicherry is a unique coastal town.",
-            "image": "https://images.unsplash.com/photo-1566303052303-b2d2a9f16f0a?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1566303052303-b2d2a9f16f0a?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
     ],
     "Beaches": [
         {
             "name": "Goa",
             "description": "Famous for its golden beaches, vibrant nightlife, and Portuguese heritage.",
-            "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Kovalam",
             "description": "A popular beach destination in Kerala known for its crescent-shaped beaches and lighthouses.",
-            "image": "https://images.unsplash.com/photo-1621338318169-c6f87f8913c1?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1621338318169-c6f87f8913c1?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Andaman and Nicobar Islands",
             "description": "Known for their pristine beaches, crystal-clear waters, and rich marine life.",
-            "image": "https://images.unsplash.com/photo-1617653202545-931490e8d7e7?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1617653202545-931490e8d7e7?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Varkala",
             "description": "A coastal town in Kerala known for its cliffs, beaches, and Papanasam beach temple.",
-            "image": "https://images.unsplash.com/photo-1610817201767-793a9130ce07?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1610817201767-793a9130ce07?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Rushikonda",
             "description": "Located in Vizag, Rishikonda is a beautiful beach known for its water sports and serene surroundings.",
-            "image": "https://images.unsplash.com/photo-1742826887940-e154c0aff836?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1742826887940-e154c0aff836?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Puri",
             "description": "Famous for its long sandy beach, Puri is also home to the Jagannath Temple, a significant spiritual site.",
-            "image": "https://images.unsplash.com/photo-1655352710727-6c89536454b3?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1655352710727-6c89536454b3?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Gokarna",
             "description": "A laid-back beach town in Karnataka, Gokarna is known for its calm atmosphere and beautiful beaches.",
-            "image": "https://images.unsplash.com/photo-1576440742053-8820cffa7bae?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1576440742053-8820cffa7bae?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Alleppey",
             "description": "Known as the Venice of the East, Alleppey in Kerala is famous for its backwaters and beautiful beach.",
-            "image": "https://plus.unsplash.com/premium_photo-1697729600773-5b039ef17f3b?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://plus.unsplash.com/premium_photo-1697729600773-5b039ef17f3b?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Mandvi Beach",
             "description": "Located in Gujarat, Mandvi Beach is known for its clean, less crowded shores and pleasant weather.",
-            "image": "https://images.unsplash.com/photo-1674481491462-e9d410a4ea41?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1674481491462-e9d410a4ea41?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Kanyakumari",
             "description": "The southernmost tip of India, Kanyakumari is known for its beautiful beaches and the confluence of the three oceans.",
-            "image": "https://images.unsplash.com/photo-1527705381526-469031509a9d?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1527705381526-469031509a9d?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
     ],
     "Deserts": [
         {
             "name": "Thar Desert",
             "description": "The Thar Desert stretches across Rajasthan and is known for its sand dunes, camel rides, and vibrant culture.",
-            "image": "https://images.unsplash.com/photo-1489493585363-d69421e0edd3?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1489493585363-d69421e0edd3?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Rann of Kutch",
             "description": "The Rann of Kutch in Gujarat is famous for its salt marshes and the Rann Utsav festival.",
-            "image": "https://images.unsplash.com/photo-1664150543913-66f20bf84ba9?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1664150543913-66f20bf84ba9?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Ladakh",
             "description": "A high-altitude desert in the Himalayas, Ladakh is known for its barren landscapes, Buddhist monasteries, and scenic beauty.",
-            "image": "https://images.unsplash.com/photo-1635255506105-b74adbd94026?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1635255506105-b74adbd94026?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Kutch",
             "description": "The desert region of Kutch in Gujarat is known for its crafts, wildlife sanctuaries, and the Kutch Desert Wildlife Sanctuary.",
-            "image": "https://images.unsplash.com/photo-1628265036737-eb481ccf95bd?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1628265036737-eb481ccf95bd?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Nubra Valley",
             "description": "Located in Ladakh, Nubra Valley is a cold desert known for its unique landscapes and camel rides.",
-            "image": "https://images.unsplash.com/photo-1593118960299-4818285df788?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1593118960299-4818285df788?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Jaisalmer",
             "description": "Known as the Golden City, Jaisalmer is located in the heart of the Thar Desert and is famous for its sandstone forts and havelis.",
-            "image": "https://images.unsplash.com/photo-1709620220232-12ecd7ca33a8?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1709620220232-12ecd7ca33a8?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Bikaner",
             "description": "A desert city in Rajasthan known for its forts, palaces, and camel rides.",
-            "image": "https://images.unsplash.com/photo-1672840892322-2045b1d0ee10?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1672840892322-2045b1d0ee10?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Sam Sand Dunes",
             "description": "Located in the Thar Desert near Jaisalmer, Sam Sand Dunes offer an opportunity to experience camel rides and traditional Rajasthani culture.",
-            "image": "https://images.unsplash.com/photo-1591018018950-798790d9f695?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1591018018950-798790d9f695?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "White Rann",
             "description": "The White Rann in Gujarat is a salt desert that transforms into a beautiful sight during the Rann Utsav.",
-            "image": "https://images.unsplash.com/photo-1647320670321-b17553f5b22e?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1647320670321-b17553f5b22e?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
     ],
     "Wildlife": [
         {
             "name": "Kaziranga National Park",
             "description": "Located in Assam, Kaziranga is famous for its one-horned rhinoceros and rich biodiversity.",
-            "image": "https://images.unsplash.com/photo-1675296098097-55f8d02e6d78?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1675296098097-55f8d02e6d78?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Jim Corbett National Park",
             "description": "Located in Uttarakhand, it is the oldest national park in India, known for its Bengal tigers and diverse wildlife.",
-            "image": "https://images.unsplash.com/photo-1475027810313-fda7c2c8e71a?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1475027810313-fda7c2c8e71a?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Sundarbans National Park",
             "description": "Famous for its mangrove forests and the Royal Bengal tigers, Sundarbans is located in West Bengal.",
-            "image": "https://images.unsplash.com/photo-1554797467-cf7c2cdae524?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1554797467-cf7c2cdae524?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Bandhavgarh National Park",
             "description": "Located in Madhya Pradesh, Bandhavgarh is famous for its large tiger population.",
-            "image": "https://images.unsplash.com/photo-1554380726-5bd6b17b42e5?w=800&auto=format&fit=crop&q=1&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QmFuZGhhdmdhcmglMjBOYXRpb25hbCUyMFBhcmt8ZW58MHx8MHx8fDA%3D"
+            "image": "https://images.unsplash.com/photo-1554380726-5bd6b17b42e5?w=800&auto=format&fit=crop&q=100&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QmFuZGhhdmdhcmglMjBOYXRpb25hbCUyMFBhcmt8ZW58MHx8MHx8fDA%3D"
         },
         {
             "name": "Ranthambore National Park",
             "description": "Located in Rajasthan, it is one of the largest national parks in India and is known for its tiger sightings.",
-            "image": "https://images.unsplash.com/photo-1698768335928-2f57b92537ab?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1698768335928-2f57b92537ab?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Periyar Wildlife Sanctuary",
             "description": "Located in Kerala, Periyar is known for its elephants and beautiful lake surrounded by lush forests.",
-            "image": "https://images.unsplash.com/photo-1555237627-74a0c63888fc?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1555237627-74a0c63888fc?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Nanda Devi and Valley of Flowers National Park",
             "description": "A UNESCO World Heritage Site in Uttarakhand, it is famous for its vibrant flowers and alpine meadows.",
-            "image": "https://images.unsplash.com/photo-1697192092975-d8cac691e731?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1697192092975-d8cac691e731?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Gir National Park",
             "description": "Located in Gujarat, Gir is the only place in the world where Asiatic lions are found in the wild.",
-            "image": "https://images.unsplash.com/photo-1545895411-5af40c24f29a?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1545895411-5af40c24f29a?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Kanha National Park",
             "description": "Famous for its wildlife and scenic beauty, it is located in Madhya Pradesh and is home to tigers and barasinghas.",
-            "image": "https://images.unsplash.com/photo-1563289278-442a75d2adae?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1563289278-442a75d2adae?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Tadoba National Park",
             "description": "Located in Maharashtra, it is one of the largest and oldest national parks in India, famous for tiger sightings.",
-            "image": "https://images.unsplash.com/photo-1626961610276-1a540095a546?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1626961610276-1a540095a546?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
     ],
     "Spiritual": [
         {
             "name": "Varanasi",
             "description": "One of the oldest cities in the world, Varanasi is a major spiritual hub on the banks of the Ganges.",
-            "image": "https://images.unsplash.com/photo-1627938823193-fd13c1c867dd?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1627938823193-fd13c1c867dd?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Bodh Gaya",
             "description": "The site where Gautama Buddha is said to have attained enlightenment, Bodh Gaya is a key Buddhist pilgrimage destination.",
-            "image": "https://images.unsplash.com/photo-1667374073450-81dfcb5ebfcf?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1667374073450-81dfcb5ebfcf?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Golden Temple",
             "description": "Located in Amritsar, the Golden Temple is one of the holiest places for Sikhs and a symbol of peace and harmony.",
-            "image": "https://images.unsplash.com/photo-1651910031161-7c75098bce75?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1651910031161-7c75098bce75?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Tirupati",
             "description": "Famous for the Sri Venkateswara Temple, Tirupati is one of the most visited pilgrimage sites in India.",
-            "image": "https://images.unsplash.com/photo-1741004437852-b5364488b628?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1741004437852-b5364488b628?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Rishikesh",
             "description": "Known as the 'Yoga Capital of the World', Rishikesh is a spiritual center on the banks of the Ganges.",
-            "image": "https://images.unsplash.com/photo-1720819029162-8500607ae232?w=800&auto=format&fit=crop&q=1&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UmlzaGlrZXNofGVufDB8fDB8fHww"
+            "image": "https://images.unsplash.com/photo-1720819029162-8500607ae232?w=800&auto=format&fit=crop&q=100&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UmlzaGlrZXNofGVufDB8fDB8fHww"
         },
         {
             "name": "Haridwar",
             "description": "One of the seven holiest places in Hinduism, Haridwar is where the Ganges enters the plains.",
-            "image": "https://images.unsplash.com/photo-1641107699881-faab3a70b6fc?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1641107699881-faab3a70b6fc?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Dwarka",
             "description": "An ancient city on the western coast of India, Dwarka is one of the four Char Dham pilgrimage sites.",
-            "image": "https://images.unsplash.com/photo-1644647823703-955246666998?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1644647823703-955246666998?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Amarnath",
             "description": "Amarnath is an important Hindu pilgrimage site, located in the Himalayas in Jammu and Kashmir.",
-            "image": "https://images.unsplash.com/photo-1698723985259-68880264e201?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1698723985259-68880264e201?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Kedarnath",
             "description": "A major pilgrimage site in the Himalayas, Kedarnath is known for its ancient temple dedicated to Lord Shiva.",
-            "image": "https://images.unsplash.com/photo-1606722581293-628fa217a6f7?w=800&auto=format&fit=crop&q=1&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8S2VkYXJuYXRofGVufDB8fDB8fHww"
+            "image": "https://images.unsplash.com/photo-1606722581293-628fa217a6f7?w=800&auto=format&fit=crop&q=100&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8S2VkYXJuYXRofGVufDB8fDB8fHww"
         },
         {
             "name": "Somnath Temple",
             "description": "Located in Gujarat, Somnath Temple is one of the 12 Jyotirlinga shrines dedicated to Lord Shiva.",
-            "image": "https://images.unsplash.com/photo-1591700430569-9469d38b1006?w=800&auto=format&fit=crop&q=1&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8U29tbmF0aCUyMFRlbXBsZXxlbnwwfHwwfHx8MA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1591700430569-9469d38b1006?w=800&auto=format&fit=crop&q=100&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8U29tbmF0aCUyMFRlbXBsZXxlbnwwfHwwfHx8MA%3D%3D"
         },
         {
             "name": "Mecca Masjid",
@@ -315,57 +417,57 @@
         {
             "name": "Rishikesh",
             "description": "Rishikesh is known for white-water rafting and adventure activities in the Ganges, making it a popular adventure destination.",
-            "image": "https://images.unsplash.com/photo-1720819029162-8500607ae232?w=800&auto=format&fit=crop&q=1&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UmlzaGlrZXNofGVufDB8fDB8fHww"
+            "image": "https://images.unsplash.com/photo-1720819029162-8500607ae232?w=800&auto=format&fit=crop&q=100&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UmlzaGlrZXNofGVufDB8fDB8fHww"
         },
         {
             "name": "Leh-Ladakh",
             "description": "Known for its rugged terrain, Leh-Ladakh is a paradise for trekkers and adventure enthusiasts.",
-            "image": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Manali",
             "description": "Manali is a hotspot for adventure sports like paragliding, skiing, and trekking in the scenic Himalayas.",
-            "image": "https://images.unsplash.com/photo-1712388430474-ace0c16051e2?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1712388430474-ace0c16051e2?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Spiti Valley",
             "description": "Spiti Valley offers unique trekking and off-road biking experiences in the pristine landscape of Himachal Pradesh.",
-            "image": "https://images.unsplash.com/photo-1617159156637-dfb8655c9f95?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1617159156637-dfb8655c9f95?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Andaman Islands",
             "description": "Known for water sports, especially scuba diving and snorkeling, the Andaman Islands are a prime adventure destination.",
-            "image": "https://images.unsplash.com/photo-1586359716568-3e1907e4cf9f?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1586359716568-3e1907e4cf9f?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Goa",
             "description": "Goa is not only known for its beaches but also for its adventure activities, including water sports and parasailing.",
-            "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Trekking in Uttarakhand",
             "description": "Uttarakhand offers numerous trekking opportunities, including the Roopkund and Kedarkantha treks.",
-            "image": "https://images.unsplash.com/photo-1717050788940-189e308415fb?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1717050788940-189e308415fb?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Nanda Devi",
             "description": "Nanda Devi in Uttarakhand is a challenging and thrilling destination for mountaineers and trekkers.",
-            "image": "https://images.unsplash.com/photo-1631377954462-3e5477c674d5?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1631377954462-3e5477c674d5?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Paragliding in Bir Billing",
             "description": "Bir Billing in Himachal Pradesh is considered one of the best places in the world for paragliding.",
-            "image": "https://images.unsplash.com/photo-1669474643381-9c99377886ed?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1669474643381-9c99377886ed?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Zanskar Valley",
             "description": "Zanskar Valley in Ladakh is a popular destination for adventure enthusiasts, offering trekking and river rafting.",
-            "image": "https://images.unsplash.com/photo-1660566707824-2b8f9840ff22?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://images.unsplash.com/photo-1660566707824-2b8f9840ff22?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "name": "Kullu Valley",
             "description": "Famous for its adventure activities like trekking and rafting, Kullu Valley is a prime adventure spot in Himachal Pradesh.",
-            "image": "https://plus.unsplash.com/premium_photo-1669312740401-ad4b253637af?q=1&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "image": "https://plus.unsplash.com/premium_photo-1669312740401-ad4b253637af?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
     ]
 }

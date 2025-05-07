@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Button from "../Button/Button";
+import Button from "@/app/components/Button/Button";
 
 export default function MainContent() {
     const router = useRouter();
@@ -39,7 +39,7 @@ export default function MainContent() {
 
     const handleClick = () => {
         const value = inputRef.current?.value || "";
-        router.push(`/quiz?givenText=${encodeURIComponent(value)}`);
+        router.push(`/quiz?givenText=${encodeURIComponent(value.toLowerCase())}`);
       };
 
     return(
@@ -172,7 +172,7 @@ export default function MainContent() {
                             className="w-80 bg-white rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500"
                             >
                             <img
-                                src="https://images.unsplash.com/photo-1658105501659-41b33edb9255?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src="https://images.unsplash.com/photo-1658105501659-41b33edb9255?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 alt="Aha Moments"
                                 className="w-full h-48 object-cover"
                             />
@@ -190,7 +190,7 @@ export default function MainContent() {
                             className="w-80 bg-white rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500"
                             >
                             <img
-                                src="https://images.unsplash.com/photo-1707991396652-cf7827abe722?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src="https://images.unsplash.com/photo-1707991396652-cf7827abe722?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 alt="Visual Reports"
                                 className="w-full h-48 object-cover"
                             />
