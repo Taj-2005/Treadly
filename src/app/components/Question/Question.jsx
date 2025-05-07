@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 
@@ -20,19 +20,26 @@ export default function Question({ question, index, selectedAnswers, setSelected
   }
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6">
-      <div className="text-4xl font-bold text-center">{current.question}</div>
-      <div className="flex flex-col gap-4 w-full max-w-xl text-center">
+    <div className="flex flex-col justify-center items-center gap-6 px-4 py-6 transition duration-500">
+      <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800 leading-snug">
+        {current.question}
+      </h2>
+
+      <div className="flex flex-col gap-3 w-full max-w-2xl text-center">
         {current.options.map((opt, i) => (
-          <div
+          <button
             key={i}
             onClick={() => handleClick(i)}
-            className={`text-2xl px-6 py-3 rounded-xl cursor-pointer transition-colors duration-200
-              ${i === selectedOption ? "bg-green-500 text-white" : " hover:bg-gray-600"}
+            className={`text-lg md:text-xl px-5 py-3 rounded-lg border transition-colors duration-200
+              ${
+                i === selectedOption
+                  ? "bg-[#6dc679] text-white border-transparent"
+                  : "bg-white hover:bg-gray-100 transition-colors duration-300 text-gray-800 border-gray-300"
+              }
             `}
           >
             {opt}
-          </div>
+          </button>
         ))}
       </div>
     </div>

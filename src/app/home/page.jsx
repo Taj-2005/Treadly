@@ -2,7 +2,8 @@
 
 import NavBar from "@/app/components/NavBar/NavBar";
 import MainContent from "@/app/components/MainContent/MainContent";
-import Footer from "../components/Foooter/Footer";
+import Footer from "@/app/components/Foooter/Footer";
+import QuizContainer from "@/app/components/QuizContainer/QuizContainer";
 
 export default function Home() {
 

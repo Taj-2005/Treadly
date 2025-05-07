@@ -1,11 +1,10 @@
-"use client";
-
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import Question from "@/app/components/Question/Question.jsx";
 import NavBar from "../NavBar/NavBar";
 
 export default function QuizContainer() {
+  const router = useRouter();
   const [data, setData] = useState([]);
   const [index, setIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState(Array(10).fill(null));
@@ -13,7 +12,6 @@ export default function QuizContainer() {
   const [showModal, setShowModal] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
 
   const GEMINI_API_KEY = "AIzaSyC6Jr2Eeg5E6VcpFu4L-Xn36-jqY9XvA5A";
 
@@ -34,7 +32,21 @@ export default function QuizContainer() {
         body: JSON.stringify({
           contents: [{
             parts: [{
-              text: `give 10 mcq question for travellers to know about the trip which will make them enthuastic to go for the trip, options -> array, anser as the keys of ${givenText} with question dont include any extra text just give the json file dont include any para heading or reply just return the json file to me `
+              text: `Generate 10 multiple-choice questions designed to build excitement and curiosity in travelers about an upcoming trip. Each question should be related to the trip experience and help the traveler learn more about the destination.
+
+Format the output as a valid JSON array.
+
+Each object should have:
+
+"question": the question string.
+
+"options": an array of 4 possible answers.
+
+"answer": a key from the ${givenText} that correctly corresponds to the question.
+
+Use only content from ${givenText} to form answers.
+
+Do not include any explanations, descriptions, or additional text—only return the raw JSON.`
             }]
           }]
         }),

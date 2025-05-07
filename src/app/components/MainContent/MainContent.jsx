@@ -27,15 +27,20 @@ export default function MainContent() {
             index++;
           } else {
             clearInterval(intervalId);
-            setTimeout(startTyping, 1000); // wait for 1s before typing again
+            setTimeout(startTyping, 1000); 
           }
-        }, 150); // typing speed
+        }, 150); 
       }
   
       startTyping();
   
       return () => clearInterval(intervalId);
     }, []);
+
+    const handleClick = () => {
+        const value = inputRef.current?.value || "";
+        router.push(`/quiz?givenText=${encodeURIComponent(value)}`);
+      };
 
     return(
         <>
@@ -48,11 +53,7 @@ export default function MainContent() {
                         className="font-archivo bg-white text-black p-4 md:p-5 font-semibold rounded"
                         placeholder="Enter your Destination"
                     />
-                <Button text="Get Started" onClick={() => {
-                const destination = inputRef.current?.value?.trim() || "";
-                console.log("Destination:", destination); // Log the value to check
-                router.push(`/quiz?place=${encodeURIComponent(destination)}`);
-                }} />
+                <Button onClick={handleClick} text="Start" />
                 </div>
 
 
