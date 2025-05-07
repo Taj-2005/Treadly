@@ -1,0 +1,18 @@
+"use client";
+
+import Footer from "@/app/components/Foooter/Footer";
+import QuizContainer from "@/app/components/QuizContainer/QuizContainer";
+import Navbar from "@/app/components/NavBar/NavBar";
+import { useSearchParams } from "next/navigation";
+
+export default function Quiz(){
+    const searchParams = useSearchParams();
+    const input = searchParams.get("givenText");
+    return(
+        <>
+            <Navbar/>
+            <QuizContainer givenText={input}/>
+            <Footer/>
+        </>
+    )
+}
