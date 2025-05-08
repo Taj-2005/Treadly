@@ -6,7 +6,7 @@ export default function Card({ title, description, image }) {
   const router = useRouter();
   const handleClick = () => {
     const value = title;
-    router.push(`/quiz?givenText=${encodeURIComponent(value.toLowerCase())}`);
+    router.push(`/quiz?place=${encodeURIComponent(value.toLowerCase())}`);
   };
     return (
       <div onClick={handleClick} className="relative w-full max-w-sm overflow-hidden rounded-lg shadow-xl group">

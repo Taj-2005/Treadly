@@ -38,7 +38,7 @@ export default function QuizInput() {
 
       const handleClick = () => {
         const value = quizRef.current?.value || "";
-        router.push(`/quiz?givenText=${encodeURIComponent(value.toLowerCase())}`);
+        router.push(`/quiz?place=${encodeURIComponent(value.toLowerCase())}`);
       };
 
     return (

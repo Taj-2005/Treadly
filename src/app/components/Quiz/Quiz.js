@@ -7,7 +7,7 @@ import { useSearchParams } from "next/navigation";
 
 export default function Quiz(){
     const searchParams = useSearchParams();
-    const input = searchParams.get("givenText");
+    const input = searchParams.get("place");
     return(
         <>
             <Navbar/>
