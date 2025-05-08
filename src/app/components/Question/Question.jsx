@@ -21,7 +21,7 @@ export default function Question({ question, index, selectedAnswers, setSelected
 
   return (
     <div className="flex flex-col justify-center items-center gap-6 px-4 py-6 transition duration-500">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800 leading-snug">
+      <h2 className="text-[5vw] md:text-4xl font-semibold text-center text-gray-800 leading-snug">
         {current.question}
       </h2>
 
@@ -30,7 +30,7 @@ export default function Question({ question, index, selectedAnswers, setSelected
           <button
             key={i}
             onClick={() => handleClick(i)}
-            className={`text-lg md:text-xl px-5 py-3 rounded-lg border transition-colors duration-200
+            className={`text-lg md:text-xl px-5 py-2 md:py-3 rounded-lg border transition-colors duration-200
               ${
                 i === selectedOption
                   ? "bg-[#6dc679] text-white border-transparent"

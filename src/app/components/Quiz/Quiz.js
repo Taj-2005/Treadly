@@ -1,6 +1,6 @@
 "use client";
 
-import Footer from "@/app/components/Foooter/Footer";
+import Footer from "@/app/components/Footer/Footer";
 import QuizContainer from "@/app/components/QuizContainer/QuizContainer";
 import Navbar from "@/app/components/NavBar/NavBar";
 import { useSearchParams } from "next/navigation";

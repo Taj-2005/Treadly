@@ -4,14 +4,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Question from '@/app/components/Question/Question';
 import Button from '@/app/components/Button/Button';
+import confetti from 'canvas-confetti';
 
 export default function QuizContainer({ givenText }) {
   const router = useRouter();
   const [data, setData] = useState([]);
+  const [answers, setAnswers] = useState([]);
   const [index, setIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState(Array(10).fill(null));
   const [showModal, setShowModal] = useState(false);
-  const [showExitModal, setShowExitModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [nextRoute, setNextRoute] = useState(null);
@@ -29,7 +30,10 @@ export default function QuizContainer({ givenText }) {
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error || 'Unexpected error occurred');
+      console.log('Quiz data:', json);
       setData(json);
+      const initialAnswers = json.map(q => q.options.findIndex(opt => opt === q.answer));
+      setAnswers(initialAnswers);
     } catch (err) {
       console.error('Quiz generation error:', err.message);
       setError(err.message);
@@ -49,7 +53,7 @@ export default function QuizContainer({ givenText }) {
         blockingRef.current = true;
         setShowExitModal(true);
         setNextRoute(url);
-        throw 'Navigation cancelled'; // Cancel route change
+        throw 'Navigation cancelled';
       }
     };
 
@@ -62,7 +66,6 @@ export default function QuizContainer({ givenText }) {
     };
   }, [data]);
 
-  // ✨ Allow navigation after confirmation
   const confirmExit = () => {
     blockingRef.current = false;
     setShowExitModal(false);
@@ -123,12 +126,28 @@ export default function QuizContainer({ givenText }) {
                 <h2 className="text-2xl font-semibold text-gray-800 mb-3">Confirm Submission</h2>
                 <p className="text-gray-600 mb-6">Are you sure you want to submit your answers?</p>
                 <div className="flex justify-center gap-4">
-                    <button
-                    onClick={() => router.push("/home")}
-                    className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg transition"
-                    >
-                    Yes, Submit
-                    </button>
+                <button
+                  onClick={() => {
+                    confetti({
+                      particleCount: 120,
+                      spread: 80,
+                      origin: { y: 0.6 },
+                      shapes: ['square'],
+                      colors: ['#FF4C4C', '#4C8CFF', '#34D399', '#FFD700', '#A855F7'],
+                    });
+
+                    localStorage.setItem("quiz_data", JSON.stringify(data));
+                    localStorage.setItem("quiz_answers", JSON.stringify(answers));
+                    localStorage.setItem("quiz_selected", JSON.stringify(selectedAnswers));
+
+                    setTimeout(() => {
+                      router.push(`/results?place=${encodeURIComponent(givenText)}`);
+                    }, 1000);
+                  }}
+                  className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg transition"
+                >
+                  Yes, Submit
+                </button>
                     <button
                     onClick={() => setShowModal(false)}
                     className="bg-red-400 hover:bg-red-500 text-white px-5 py-2 rounded-lg transition"
