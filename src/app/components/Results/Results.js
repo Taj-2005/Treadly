@@ -6,10 +6,22 @@ import Navbar from "@/app/components/NavBar/NavBar";
 import Footer from "@/app/components/Footer/Footer";
 import Button from "@/app/components/Button/Button";
 import confetti from "canvas-confetti";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 export default function Results({ place }) {
-  const capitalizedLetter = place?.charAt(0).toUpperCase() + place?.slice(1);
   const router = useRouter();
+
+  const capitalizedLetter = place?.charAt(0).toUpperCase() + place?.slice(1);
 
   const [data, setData] = useState([]);
   const [answers, setAnswers] = useState([]);
@@ -39,6 +51,9 @@ export default function Results({ place }) {
   };
 
   const handleSaveAndExit = () => {
+    localStorage.removeItem("quiz_data");
+    localStorage.removeItem("quiz_answers");
+    localStorage.removeItem("quiz_selected");
     triggerConfetti();
     router.push("/");
   };
@@ -50,13 +65,74 @@ export default function Results({ place }) {
     triggerConfetti();
     router.push("/");
   };
+  const COLORS = ["#34D399", "#F87171"]; // green, red
+  const correctCount = answers.filter((a, i) => a === selectedAnswers[i]).length;
+  const incorrectCount = answers.length - correctCount;
 
+  const summaryData = [
+    { name: "Correct", value: correctCount },
+    { name: "Incorrect", value: incorrectCount },
+  ];
+
+  const barData = data.map((q, i) => ({
+    name: `Q${i + 1}`,
+    correct: answers[i] === selectedAnswers[i] ? 1 : 0,
+  }));
   return (
     <>
       <Navbar />
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#fef7f1] text-black">
         <h1 className="text-4xl md:text-5xl font-semibold font-archivo mb-6 text-center">Results</h1>
         <p className="text-lg md:text-xl font-bold mb-4">Destination: {capitalizedLetter}</p>
+        <div className="w-full max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+          {/* Score Overview */}
+          <div className="bg-white p-6 rounded-2xl shadow-lg">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Score Overview</h2>
+            <ResponsiveContainer width="100%" height={250}>
+              <PieChart>
+                <Pie
+                  data={summaryData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={50}
+                  outerRadius={80}
+                  paddingAngle={4}
+                  dataKey="value"
+                >
+                  {summaryData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index]} />
+                  ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
+            <div className="flex justify-around mt-4 text-sm text-gray-700 font-medium">
+              <span className="flex items-center gap-2">
+                <span className="w-3 h-3 bg-[#34D399] inline-block rounded-full" />
+                Correct: {correctCount}
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="w-3 h-3 bg-[#F87171] inline-block rounded-full" />
+                Incorrect: {incorrectCount}
+              </span>
+            </div>
+          </div>
+
+          {/* Question Performance */}
+          <div className="bg-white p-6 rounded-2xl shadow-lg">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Question-wise Accuracy</h2>
+            <ResponsiveContainer width="100%" height={250}>
+              <BarChart data={barData}>
+                <XAxis dataKey="name" tick={{ fontSize: 12 }} />
+                <YAxis tickFormatter={(val) => (val === 1 ? "✔" : "")} />
+                <Tooltip
+                  formatter={(value) => [`Status: ${value === 1 ? "Correct" : "Incorrect"}`]}
+                  cursor={{ fill: "#f0f0f0" }}
+                />
+                <Bar dataKey="correct" fill="#60A5FA" radius={[8, 8, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
 
         {data.length > 0 ? (
           <div className="w-full max-w-3xl px-6">
