@@ -41,15 +41,29 @@ export default function Results({ place }) {
   }, []);
 
   const triggerConfetti = () => {
-    confetti({
-      particleCount: 120,
-      spread: 80,
+    const duration = 1000; 
+    const animationEnd = Date.now() + duration;
+    const defaults = {
       origin: { y: 0.6 },
       shapes: ["square"],
       colors: ["#FF4C4C", "#4C8CFF", "#34D399", "#FFD700", "#A855F7"],
-    });
-  };
+    };
 
+    function randomInRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+      if (timeLeft <= 0) return clearInterval(interval);
+      confetti({
+        ...defaults,
+        particleCount: randomInRange(20, 40),
+        spread: randomInRange(60, 100),
+        scalar: randomInRange(0.8, 1.2),
+      });
+    }, 200);
+  };
   const handleSaveAndExit = () => {
     localStorage.removeItem("quiz_data");
     localStorage.removeItem("quiz_answers");
