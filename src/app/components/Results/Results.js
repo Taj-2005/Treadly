@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Navbar from "@/app/components/NavBar/NavBar";
-import Footer from "@/app/components/Footer/Footer";
 import Button from "@/app/components/Button/Button";
 import confetti from "canvas-confetti";
 import {
@@ -94,7 +92,6 @@ export default function Results({ place }) {
   }));
   return (
     <>
-      <Navbar />
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#fef7f1] text-black">
         <h1 className="text-4xl md:text-5xl font-semibold font-archivo mb-6 text-center">Results</h1>
         <p className="text-lg md:text-xl font-bold mb-4">Destination: {capitalizedLetter}</p>
@@ -207,7 +204,6 @@ export default function Results({ place }) {
           </div>
         </div>
       )}
-      <Footer />
     </>
   );
 }

@@ -10,9 +10,7 @@ export default function Quiz(){
     const input = searchParams.get("place");
     return(
         <>
-            <Navbar/>
             <QuizContainer givenText={input}/>
-            <Footer/>
         </>
     )
 }

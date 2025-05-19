@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono,Great_Vibes, Poppins, Montserrat, Playfair_Display, Roboto, Open_Sans, Lora, Raleway, Quicksand, Oswald, Bebas_Neue, Archivo} from "next/font/google";
 import Head from 'next/head';
 import "./globals.css";
+import Footer from "@/app/components/Footer/Footer";
+import Navbar from "@/app/components/NavBar/NavBar";
 
 // Load Google fonts using Next.js method
 const geistSans = Geist({
@@ -99,7 +101,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${greatVibes.variable} ${poppins.variable} ${montserrat.variable} ${playfairDisplay.variable} ${roboto.variable} ${openSans.variable} ${lora.variable} ${raleway.variable} ${quicksand.variable} ${oswald.variable} ${bebas.variable} ${archivo.variable}`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

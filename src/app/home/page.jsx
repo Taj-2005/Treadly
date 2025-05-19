@@ -9,9 +9,7 @@ export default function Home() {
 
   return (
     <>
-      <NavBar />
       <MainContent />
-      <Footer />
     </>
   );
 }
