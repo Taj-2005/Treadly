@@ -9,7 +9,7 @@ export default function QuizInput() {
     const quizRef = useRef("")
 
     useEffect(() => {
-        const placeholderText = "Enter your Destination";
+        const placeholderText = "Enter your Destination...";
         let currentText = "";
         let index = 0;
         let intervalId;

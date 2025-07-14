@@ -11,8 +11,9 @@ export default function QuizContainer({ givenText }) {
   const [data, setData] = useState([]);
   const [answers, setAnswers] = useState([]);
   const [index, setIndex] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState(Array(10).fill(null));
+  const [selectedAnswers, setSelectedAnswers] = useState(Array(10).fill(-1)); // -1 means not answered
   const [showModal, setShowModal] = useState(false);
+  const [showExitModal, setShowExitModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [nextRoute, setNextRoute] = useState(null);
@@ -100,6 +101,7 @@ export default function QuizContainer({ givenText }) {
       });
     }, 200);
   };
+
   return (
     <div className="min-h-screen px-4 py-6 bg-[#fef7f1]">
     {loading && (
@@ -176,7 +178,31 @@ export default function QuizContainer({ givenText }) {
             </div>
             )}
 
-            
+            {showExitModal && (
+              <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex items-center justify-center z-50">
+                <div className="bg-white p-6 rounded-2xl shadow-lg max-w-md w-full text-center">
+                  <h2 className="text-2xl font-semibold text-gray-800 mb-3">Leave Quiz?</h2>
+                  <p className="text-gray-600 mb-6">Your progress will be lost if you leave now.</p>
+                  <div className="flex justify-center gap-4">
+                    <button
+                      onClick={confirmExit}
+                      className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg transition"
+                    >
+                      Yes, Leave
+                    </button>
+                    <button
+                      onClick={() => {
+                        setShowExitModal(false);
+                        blockingRef.current = false;
+                      }}
+                      className="bg-gray-400 hover:bg-gray-500 text-white px-5 py-2 rounded-lg transition"
+                    >
+                      Stay
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
         </div>
         </>
     )}

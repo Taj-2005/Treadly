@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Button from "@/app/components/Button/Button";
+import QuizInput from "../QuizInput/QuizInput";
 
 export default function MainContent() {
     const router = useRouter();
     const inputRef = useRef(null);
 
     useEffect(() => {
-      const placeholderText = "Enter your Destination";
+      const placeholderText = "Enter your Destination...";
       let currentText = "";
       let index = 0;
       let intervalId;
