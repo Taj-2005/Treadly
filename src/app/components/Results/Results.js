@@ -311,7 +311,7 @@ export default function Results({ place }) {
         <h1 className="text-4xl md:text-5xl font-semibold font-archivo mb-6 text-center">Results</h1>
         <p className="text-lg md:text-xl font-bold mb-4">Destination: {capitalizedLetter}</p>
         
-        <div className="w-full max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <div className="w-full max-w-4xl px-6 mb-10">
           {/* Score Overview */}
           <div className="bg-white p-6 rounded-2xl shadow-lg">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Score Overview</h2>
