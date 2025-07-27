@@ -9,7 +9,7 @@ export default function ContactForm() {
   const [error, setError] = useState("");
 
   const triggerConfetti = () => {
-    const duration = 1000; // 1 second
+    const duration = 1000;
     const animationEnd = Date.now() + duration;
     const defaults = {
       origin: { y: 0.6 },

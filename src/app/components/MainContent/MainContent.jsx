@@ -143,7 +143,6 @@ export default function MainContent() {
                         <div className="absolute bottom-0 right-0 w-48 h-48 bg-green-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-pulse"></div>
                     </div>   
                     <div className="w-full h-auto top-0 font-bold min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-amber-100 via-amber-200 to-amber-300 relative p-10 sm:p-0">
-                        {/* Heading */}
                         <motion.h1
                             initial={{ opacity: 0, y: -50 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -153,7 +152,6 @@ export default function MainContent() {
                             Informative Results
                         </motion.h1>
 
-                        {/* Subheading */}
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -163,9 +161,7 @@ export default function MainContent() {
                             Unlock Knowledge 🌿📚 after every quiz!
                         </motion.p>
 
-                        {/* Cards */}
                         <div className="flex flex-wrap justify-center gap-10">
-                            {/* Card 1 */}
                             <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -183,7 +179,6 @@ export default function MainContent() {
                             </div>
                             </motion.div>
 
-                            {/* Card 2 */}
                             <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -202,7 +197,6 @@ export default function MainContent() {
                             </motion.div>
                         </div>
 
-                        {/* Blurred background blobs */}
                         <div className="absolute top-0 left-0 w-48 h-48 bg-yellow-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-pulse"></div>
                         <div className="absolute bottom-0 right-0 w-48 h-48 bg-orange-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-pulse"></div>
                     </div>

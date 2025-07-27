@@ -82,7 +82,6 @@ export default function Results({ place }) {
 
   const downloadPDF = async () => {
     try {
-      // Dynamic import to avoid SSR issues
       const { jsPDF } = await import('jspdf');
       
       const doc = new jsPDF();
@@ -91,26 +90,22 @@ export default function Results({ place }) {
       const margin = 20;
       let yPosition = margin;
       
-      // Helper function to add a line separator
       const addSeparator = () => {
         doc.setDrawColor(200, 200, 200);
         doc.line(margin, yPosition, pageWidth - margin, yPosition);
         yPosition += 10;
       };
       
-      // Title with background
-      doc.setFillColor(52, 211, 153); // Green background
+      doc.setFillColor(52, 211, 153);
       doc.rect(margin, yPosition - 5, pageWidth - 2 * margin, 20, 'F');
-      doc.setTextColor(255, 255, 255); // White text
+      doc.setTextColor(255, 255, 255);
       doc.setFontSize(20);
       doc.setFont(undefined, 'bold');
       doc.text('Quiz Results', pageWidth / 2, yPosition + 8, { align: 'center' });
       yPosition += 25;
       
-      // Reset text color
       doc.setTextColor(0, 0, 0);
       
-      // Destination
       doc.setFontSize(16);
       doc.setFont(undefined, 'bold');
       doc.text(`Destination: ${capitalizedLetter}`, pageWidth / 2, yPosition, { align: 'center' });
@@ -118,7 +113,6 @@ export default function Results({ place }) {
       
       addSeparator();
       
-      // Score summary box
       const correctCount = answers.filter((a, i) => selectedAnswers[i] !== -1 && a === selectedAnswers[i]).length;
       const incorrectCount = answers.filter((a, i) => selectedAnswers[i] !== -1 && a !== selectedAnswers[i]).length;
       const notAnsweredCount = selectedAnswers.filter(selected => selected === -1).length;
@@ -156,7 +150,6 @@ export default function Results({ place }) {
       yPosition += summaryBoxHeight + 10;
       addSeparator();
       
-      // Color legend
       doc.setFontSize(12);
       doc.setFont(undefined, 'bold');
       doc.text('Color Legend:', margin, yPosition);
@@ -165,108 +158,88 @@ export default function Results({ place }) {
       doc.setFontSize(10);
       doc.setFont(undefined, 'normal');
       
-      // Dark green - answered correct
       doc.setTextColor(22, 101, 52);
       doc.text('Dark Green - Your Correct Answer', margin, yPosition);
       yPosition += 8;
       
-      // Light green - correct answer
       doc.setTextColor(34, 197, 94);
       doc.text('Light Green - Correct Answer', margin, yPosition);
       yPosition += 8;
       
-      // Red - wrong answer
       doc.setTextColor(239, 68, 68);
       doc.text('Red - Your Wrong Answer', margin, yPosition);
       yPosition += 12;
       
-      // Reset text color
       doc.setTextColor(0, 0, 0);
       
       addSeparator();
       
-      // Questions and answers
       doc.setFontSize(16);
       doc.setFont(undefined, 'bold');
       doc.text('Detailed Results', margin, yPosition);
       yPosition += 20;
       
       data.forEach((q, i) => {
-        // Check if we need a new page
         if (yPosition > pageHeight - 80) {
           doc.addPage();
           yPosition = margin;
         }
         
-        // Question number and text
         doc.setFontSize(12);
         doc.setFont(undefined, 'bold');
         doc.text(`Question ${i + 1}:`, margin, yPosition);
         yPosition += 8;
         
-        // Question text with proper wrapping
         doc.setFont(undefined, 'normal');
         const questionText = q.question;
         const questionLines = doc.splitTextToSize(questionText, pageWidth - 2 * margin);
         doc.text(questionLines, margin, yPosition);
         yPosition += questionLines.length * 6 + 8;
         
-        // Options with better formatting
         doc.setFontSize(11);
         q.options.forEach((opt, idx) => {
           const isCorrect = idx === answers[i];
           const isSelected = idx === selectedAnswers[i];
           const isNotAnswered = selectedAnswers[i] === -1;
           
-          let textColor = [0, 0, 0]; // Default black
+          let textColor = [0, 0, 0];
           let fontWeight = 'normal';
           
           if (isNotAnswered) {
-            // For unanswered questions, only highlight the correct answer
             if (isCorrect) {
-              textColor = [34, 197, 94]; // Green for correct answer
+              textColor = [34, 197, 94];
               fontWeight = 'bold';
             }
           } else {
-            // For answered questions
             if (isSelected && isCorrect) {
-              // Selected correct answer - Dark Green
-              textColor = [22, 101, 52]; // Dark Green
+              textColor = [22, 101, 52];
               fontWeight = 'bold';
             } else if (isSelected && !isCorrect) {
-              // Selected incorrect answer - Red
-              textColor = [239, 68, 68]; // Red
+              textColor = [239, 68, 68];
               fontWeight = 'bold';
             } else if (!isSelected && isCorrect) {
-              // Unselected correct answer - Green (to show what was right)
-              textColor = [34, 197, 94]; // Green
+              textColor = [34, 197, 94];
               fontWeight = 'bold';
             } else {
-              // Other unselected options - Default
-              textColor = [0, 0, 0]; // Black
+              textColor = [0, 0, 0];
               fontWeight = 'normal';
             }
           }
           
-          // Set text color and font weight
           doc.setTextColor(textColor[0], textColor[1], textColor[2]);
           doc.setFont(undefined, fontWeight);
           
-          // Format option text with letter labels
-          const optionLabel = String.fromCharCode(65 + idx); // A, B, C, D
+          const optionLabel = String.fromCharCode(65 + idx);
           const optionText = `${optionLabel}. ${opt}`;
           const optionLines = doc.splitTextToSize(optionText, pageWidth - 2 * margin - 15);
           doc.text(optionLines, margin + 15, yPosition);
           yPosition += optionLines.length * 5 + 2;
         });
         
-        // Reset text color
         doc.setTextColor(0, 0, 0);
         
-        // Add space between questions
         yPosition += 10;
         
-        // Add a light separator line between questions
         if (i < data.length - 1) {
           doc.setDrawColor(240, 240, 240);
           doc.line(margin, yPosition, pageWidth - margin, yPosition);
@@ -274,13 +247,11 @@ export default function Results({ place }) {
         }
       });
       
-      // Footer
       const date = new Date().toLocaleDateString();
       doc.setFontSize(10);
       doc.setTextColor(107, 114, 128);
       doc.text(`Generated on: ${date}`, margin, pageHeight - 10);
       
-      // Save the PDF
       doc.save(`quiz-results-${capitalizedLetter}-${date}.pdf`);
       
     } catch (error) {
@@ -289,7 +260,7 @@ export default function Results({ place }) {
     }
   };
 
-  const COLORS = ["#34D399", "#F87171", "#FCD34D"]; // green, red, yellow
+  const COLORS = ["#34D399", "#F87171", "#FCD34D"]; 
   const correctCount = answers.filter((a, i) => selectedAnswers[i] !== -1 && a === selectedAnswers[i]).length;
   const incorrectCount = answers.filter((a, i) => selectedAnswers[i] !== -1 && a !== selectedAnswers[i]).length;
   const notAnsweredCount = selectedAnswers.filter(selected => selected === -1).length;
@@ -312,7 +283,6 @@ export default function Results({ place }) {
         <p className="text-lg md:text-xl font-bold mb-4">Destination: {capitalizedLetter}</p>
         
         <div className="w-full max-w-4xl px-6 mb-10">
-          {/* Score Overview */}
           <div className="bg-white p-6 rounded-2xl shadow-lg">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Score Overview</h2>
             <ResponsiveContainer width="100%" height={250}>
@@ -364,27 +334,21 @@ export default function Results({ place }) {
                     let textClass = "";
 
                     if (isNotAnswered) {
-                      // For unanswered questions, only highlight the correct answer
                       if (isCorrect) {
                         bgClass = "bg-green-200";
                         textClass = "font-semibold text-green-800";
                       }
                     } else {
-                      // For answered questions
                       if (isSelected && isCorrect) {
-                        // Selected correct answer - Dark Green
                         bgClass = "bg-green-600";
                         textClass = "text-white font-semibold";
                       } else if (isSelected && !isCorrect) {
-                        // Selected incorrect answer - Red
                         bgClass = "bg-red-400";
                         textClass = "text-white font-semibold";
                       } else if (!isSelected && isCorrect) {
-                        // Unselected correct answer - Green (to show what was right)
                         bgClass = "bg-green-200";
                         textClass = "font-semibold text-green-800";
                       }
-                      // Other unselected options remain with default styling
                     }
 
                     return (

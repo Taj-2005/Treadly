@@ -11,7 +11,7 @@ export default function QuizContainer({ givenText }) {
   const [data, setData] = useState([]);
   const [answers, setAnswers] = useState([]);
   const [index, setIndex] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState(Array(10).fill(-1)); // -1 means not answered
+  const [selectedAnswers, setSelectedAnswers] = useState(Array(10).fill(-1));
   const [showModal, setShowModal] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
   const [loading, setLoading] = useState(false);

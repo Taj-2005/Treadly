@@ -10,7 +10,6 @@ export async function POST(req) {
       return NextResponse.json({ error: 'Missing givenText input.' }, { status: 400 });
     }
 
-    // Prepare the prompt with the givenText from the request
     const prompt = `Generate 10 multiple-choice questions designed to build excitement and curiosity in travelers about an upcoming trip. Each question should be related to the trip experience and help the traveler learn more about the destination.
 
 Format the output as a valid JSON array.
@@ -27,7 +26,6 @@ Use only content from ${givenText} to form answers.
 
 Do not include any explanations, descriptions, or additional text—only return the raw JSON.`;
 
-    // Fetch from Gemini API
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`,
       {
@@ -45,7 +43,6 @@ Do not include any explanations, descriptions, or additional text—only return 
 
     const data = await response.json();
 
-    // Extract and clean the response string
     let jsonString = data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
 
     if (!jsonString) {
@@ -55,7 +52,6 @@ Do not include any explanations, descriptions, or additional text—only return 
     if (jsonString.startsWith('```json')) jsonString = jsonString.substring(7).trimStart();
     if (jsonString.endsWith('```')) jsonString = jsonString.slice(0, -3).trimEnd();
 
-    // Try parsing the cleaned JSON string
     try {
       const parsedJSON = JSON.parse(jsonString);
       return NextResponse.json(parsedJSON);

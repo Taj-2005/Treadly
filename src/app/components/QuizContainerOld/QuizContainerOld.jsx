@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Question from "@/app/components/Question/Question.jsx";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "../Navbar/Navbar";
 
 export default function QuizContainer() {
   const router = useRouter();
@@ -152,7 +152,6 @@ Do not include any explanations, descriptions, or additional text—only return 
                 Submit
               </button>
 
-              {/* Submit confirmation modal */}
               {showModal && (
                 <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
                   <div className="bg-white p-6 rounded-2xl shadow-2xl max-w-md w-full text-center animate-fadeIn scale-95">
@@ -180,7 +179,6 @@ Do not include any explanations, descriptions, or additional text—only return 
                 </div>
               )}
 
-              {/* Exit without submitting confirmation modal */}
               {showExitModal && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                   <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-lg w-full text-center">

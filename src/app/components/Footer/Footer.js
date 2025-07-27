@@ -11,8 +11,8 @@ export default function Footer() {
   const isOnQuizPage = pathname === '/quiz';
   const isOnResultsPage = pathname === '/results';
 
-  const [showExitModal, setShowExitModal] = useState(false); // Quiz modal
-  const [showExitModalResults, setShowExitModalResults] = useState(false); // Results modal
+  const [showExitModal, setShowExitModal] = useState(false);
+  const [showExitModalResults, setShowExitModalResults] = useState(false);
   const [nextRoute, setNextRoute] = useState('');
 
   const handleFooterNav = (path) => {
@@ -128,7 +128,6 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* Quiz Exit Modal */}
       {showExitModal && (
         <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex items-center justify-center z-50">
           <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-lg w-full text-center">
@@ -155,7 +154,6 @@ export default function Footer() {
         </div>
       )}
 
-      {/* Results Exit Modal */}
       {showExitModalResults && (
         <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex items-center justify-center z-50">
           <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-lg w-full text-center">
