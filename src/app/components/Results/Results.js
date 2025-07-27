@@ -252,7 +252,7 @@ export default function Results({ place }) {
       doc.setTextColor(107, 114, 128);
       doc.text(`Generated on: ${date}`, margin, pageHeight - 10);
       
-      doc.save(`quiz-results-${capitalizedLetter}-${date}.pdf`);
+      doc.save(`Treadly-quiz-results-${capitalizedLetter}-${date}.pdf`);
       
     } catch (error) {
       console.error('Error generating PDF:', error);
@@ -371,7 +371,7 @@ export default function Results({ place }) {
             className="flex flex-row justify-center items-center gap-2 text-[#C7C5C2] bg-blue-600 hover:bg-blue-700 text-archivo font-semibold p-4 md:py-5 md:px-10 rounded-2xl hover:text-white hover:scale-105 transition shadow-2xl"
           >
             <Download/>
-            Download PDF
+            Download Report
           </button>
           <button
             onClick={() => setShowExitModal(true)}
