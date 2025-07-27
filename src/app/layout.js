@@ -3,9 +3,6 @@ import Head from 'next/head';
 import "./globals.css";
 import Footer from "@/app/components/Footer/Footer";
 import Navbar from "@/app/components/Navbar/Navbar";
-import { Toaster } from "react-hot-toast";
-
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -137,7 +134,6 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -145,7 +141,6 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${greatVibes.variable} ${poppins.variable} ${montserrat.variable} ${playfairDisplay.variable} ${roboto.variable} ${openSans.variable} ${lora.variable} ${raleway.variable} ${quicksand.variable} ${oswald.variable} ${bebas.variable} ${archivo.variable}`}>
-      <Toaster position="top-right" />
         <Navbar />
         {children}
         <Footer />
